@@ -6,15 +6,17 @@ import { GoogleLogin, GoogleLogout } from "react-google-login"
 import { AiOutlineLogout } from "react-icons/ai"
 import { BiSearch } from "react-icons/bi"
 import { IoMdAdd } from "react-icons/io"
-import Logo from "../utils/tiktik-logo.png"
+import Logo from "../utils/d36bf4b8d4155f743245bc805febd26d.png"
 const Navbar = () => {
 	return (
-		<div className="w-full flex justifiy-between items-center px-4 py-2 border-b-2 border-gray-200">
+		<div className="flex py-2 px-4 bg-[#1D1D1F] xl:border-gray-200">
 			<Link href={"/"}>
-				<div className="w-[100px] md:w-[130px]">
+				<div className="w-[100px] md:w-[140px]">
 					<Image
 						className="cursor-pointer"
 						src={Logo}
+						width={100}
+						height={100}
 						alt="TikTok"
 						layout="responsive"
 					/>
