@@ -3,6 +3,7 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import { topics } from "../utils/constants"
 const Discover = () => {
+	// useRouter.querry get the path of the router to compare with item.name in the href property
 	const router = useRouter()
 	const { topic } = router.query
 	const activeTopicStyle =

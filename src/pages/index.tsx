@@ -1,11 +1,28 @@
 import { NextPage } from "next"
 import axios from "axios"
-// interface IProps {
-// 	videos:
-// }
-const Home: NextPage = ({ videos }) => {
-	console.log(videos)
-	return <h1 className="text-3xl font-bold underline"></h1>
+import { Video } from "../../type"
+import NoResutlt from "../../components/NoResutlt"
+import VideoCard from "../../components/VideoCard"
+
+interface IProps {
+	videos: Video[]
+}
+
+const Home = ({ videos }: IProps) => {
+	return (
+		<div className="flex flex-col gap-10 videos h-full">
+			{videos.length ? (
+				videos.map((video: Video) => (
+					<VideoCard
+						post={video}
+						key={video._id}
+					/>
+				))
+			) : (
+				<NoResutlt />
+			)}
+		</div>
+	)
 }
 
 export const getServerSideProps = async () => {

@@ -1,6 +1,8 @@
 import React from "react"
 import { footerList1, footerList2, footerList3 } from "../utils/constants"
 import { GiHellCrosses } from "react-icons/gi"
+
+// child component
 const List = ({ items, mt }: { items: string[]; mt: boolean }) => {
 	return (
 		<div className={`flex flex-wrap gap-3 ${mt && "mt-5"}`}>
@@ -15,6 +17,7 @@ const List = ({ items, mt }: { items: string[]; mt: boolean }) => {
 	)
 }
 
+// parent component
 const Footer = () => {
 	return (
 		<div className="mt-6 hidden xl:block">
