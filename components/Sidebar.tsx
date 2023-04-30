@@ -1,18 +1,19 @@
-import React, { useState } from "react"
-import { NextPage } from "next"
-import { useRouter } from "next/router"
-import Link from "next/link"
-import GoogleLogin from "react-google-login"
-import { AiFillHome, AiOutlineMenu } from "react-icons/ai"
-import { ImCancelCircle, ImClearFormatting } from "react-icons/im"
-import Discover from "./Discover"
-import SuggestedAccount from "./SuggestedAccount"
-import Footer from "./Footer"
+import React, { useState } from "react";
+import { NextPage } from "next";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import GoogleLogin from "react-google-login";
+import { AiFillHome, AiOutlineMenu } from "react-icons/ai";
+import { ImCancelCircle, ImClearFormatting } from "react-icons/im";
+import Discover from "./Discover";
+import SuggestedAccount from "./SuggestedAccount";
+import Footer from "./Footer";
 const Sidebar = () => {
-	const [showSidebar, setShowSidebar] = useState(true)
-	const userProfile = false
+	const [showSidebar, setShowSidebar] = useState(true);
+	const userProfile = false;
 	const normalLink =
-		"flex items-center gap-3 hover:bg-primary p-3 justify-ceter xl:justify-start cursor-pointer font-semibold text-[#F51997] rounded"
+		"flex items-center gap-3 hover:bg-primary p-3 justify-ceter xl:justify-start cursor-pointer font-semibold text-[#F51997] rounded";
+
 	return (
 		<div>
 			<div
@@ -32,7 +33,7 @@ const Sidebar = () => {
 							</div>
 						</Link>
 					</div>
-					{!userProfile && (
+					{/* {!userProfile && (
 						<div className="px-2 py-4 hidden xl:block">
 							<p className="text-gray-400">
 								Login to like and comment on videos
@@ -54,14 +55,14 @@ const Sidebar = () => {
 								/>
 							</div>
 						</div>
-					)}
+					)} */}
 					<Discover />
 					<SuggestedAccount />
 					<Footer />
 				</div>
 			)}
 		</div>
-	)
-}
+	);
+};
 
-export default Sidebar
+export default Sidebar;
