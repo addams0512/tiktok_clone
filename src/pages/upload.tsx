@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
-
+import { BASE_URL } from "../../utils";
 // server
 import { SanityAssetDocument } from "@sanity/client";
 
@@ -74,7 +74,7 @@ const Upload = () => {
 				topic: category,
 			};
 
-			await axios.post("http://localhost:3000/api/post", document);
+			await axios.post(`${BASE_URL}/api/post`, document);
 			router.push("/");
 		}
 	};
